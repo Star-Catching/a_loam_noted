@@ -295,6 +295,7 @@ int main(int argc, char **argv)
                     // 定义一下ceres的核函数
                     ceres::LossFunction *loss_function = new ceres::HuberLoss(0.1);
                     // 由于旋转不满足一般意义的加法，因此这里使用ceres自带的local param
+                    //int *p = new int();
                     ceres::Manifold *q_parameterization =
                         new ceres::EigenQuaternionManifold();
                     ceres::Problem::Options problem_options;

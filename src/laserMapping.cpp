@@ -942,6 +942,7 @@ int main(int argc, char **argv)
 
 	float lineRes = 0;
 	float planeRes = 0;
+	// 线特征 与 面特征 点云的分辨率
 	nh.param<float>("mapping_line_resolution", lineRes, 0.4);
 	nh.param<float>("mapping_plane_resolution", planeRes, 0.8);
 	printf("line resolution %f plane resolution %f \n", lineRes, planeRes);
