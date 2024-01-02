@@ -401,6 +401,7 @@ int main(int argc, char **argv)
 
                             double s;
                             if (DISTORTION)
+                                // 得到的小数部分是相对于起始位置的时间 ÷这个扫描时间 得到整个扫描过程的比例位置
                                 s = (cornerPointsSharp->points[i].intensity - int(cornerPointsSharp->points[i].intensity)) / SCAN_PERIOD;
                             else
                                 s = 1.0;

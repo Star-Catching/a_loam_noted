@@ -36,7 +36,7 @@ struct LidarEdgeFactor
 		lp = q_last_curr * cp + t_last_curr;
 
 		Eigen::Matrix<T, 3, 1> nu = (lp - lpa).cross(lp - lpb);	// 模是三角形的面积
-		Eigen::Matrix<T, 3, 1> de = lpa - lpb;
+		Eigen::Matrix<T, 3, 1> de = lpa - lpb;//底边长   面积/底边=高
 		// 残差的模是该点到底边的垂线长度
 		// 这里感觉不需要定义三维
 		residual[0] = nu.x() / de.norm();
