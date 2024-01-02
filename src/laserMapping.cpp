@@ -173,7 +173,7 @@ void pointAssociateTobeMapped(PointType const *const pi, PointType *const po)
 	po->z = point_curr.z();
 	po->intensity = pi->intensity;
 }
-// 回调函数中将消息都是送入各自队列.
+// 回调函数中将消息都是送入各自队列
 void laserCloudCornerLastHandler(const sensor_msgs::PointCloud2ConstPtr &laserCloudCornerLast2)
 {
 	mBuf.lock();
